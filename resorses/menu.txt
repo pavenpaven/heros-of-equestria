@@ -1,0 +1,4 @@
+Welcome to Heros of Equestria!
+Type "help" for help.
+
+To start a new gaem type "new" 
