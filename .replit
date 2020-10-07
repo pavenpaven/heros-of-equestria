@@ -1,2 +1,2 @@
 language = "cpp"
-run = "bash compile.sh"
+run = "bash compile.sh;./main"
