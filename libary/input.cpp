@@ -1,30 +1,31 @@
+#include "input.h"
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "input.h"
 
 static std::string error_list[]={
 	"","command not found. type 'help' for help","run_command not working check input.cpp"
 };
 
 // runs command, returns status
-static int run_command(){
+static int run_command(std::string command){
+	
 	return 2;
 }
 
 static void print_error(int error_inctence){
-	std::cout<<error_list[error_inctence];
+	std::cout<<error_list[error_inctence]<<std::endl;
 }
 
 int promt(){
 	bool is_in_loop=true;
-	std::string command_character;
+	std::string command;
 	int error;
 
 	while (is_in_loop){
 		std::cout<<">";
-		std::cin>> command_character;
-		error=run_command();
+		std::cin>> command;
+		error=run_command(command);
 		print_error(error);
 		
 	}
@@ -53,6 +54,7 @@ std::string load(std::string file_name){
     while (file.good()){ // loop getting single characters
       getline(file, line);
       out.append(line);
+      out.append("\n");
     }
   }
   

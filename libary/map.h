@@ -3,15 +3,17 @@
 
 #include <vector>
 
+//std::string tile_characters[4]={"K","C","S","T"};
 
 class Map_node{
 public:
-	std::vector<Map_node> maps;
+  Map_node();
+  std::vector<Map_node> maps;
   void generate(int renderdist);
   int get_contence();
-  void print();
+  void print(int level);
 private:
-  char contence;
+  int contence;
 };
 
 #endif //MAP_H
